@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!-- 端末の画面の大きさに合わせる -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- SEO部分 -->
   <title>学生団体Hand to Hand ホームページ</title>
   <meta name="description" content="学生団体Hand to Hand のホームページです。">
@@ -57,9 +57,6 @@
       position: sticky; /* スクロールしても画面上部に固定される */
       top: 0;           /* 画面の上端にくっつける */
       z-index: 100;     /* 他の要素より手前に表示（画像などに隠れないように） */
-      will-change: transform;
-      padding-left: env(safe-area-inset-left);   /* セーフエリア対策 */
-      padding-right: env(safe-area-inset-right); /* セーフエリア対策 */
     }
     /* ナビゲーション内のリンクを中央に並べるラッパー */
     .nav-inner {
