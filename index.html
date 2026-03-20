@@ -205,6 +205,25 @@
     /* コピーライト表記 */
     .footer-copy { font-size: 11px; color: #d6d6d6; }
 
+    /* スマホ画面用の縦並び */
+    @media (max-width: 600px) {
+      .footer-inner {
+        flex-direction: column;  
+        align-items: flex-start;
+        gap: 16px;
+        padding: 0 24px;
+      }
+      .footer-col {
+        padding: 0;
+        width: 100%;
+      }
+      /* 縦並びなので右区切り線をなくし、下線に変える */
+      .footer-col:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #888;
+        padding-bottom: 16px;
+      }
+    }
     /* ── 部署カード ── */
     .dept-grid {
       display: grid;
