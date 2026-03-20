@@ -11,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
   <!-- CSS -->
   <style>
-    /* 全てのタグにデフォルトでついているスタイルをリセット */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* 全てのタグにデフォルトでついているスタイルをリセット これがないと<h1>にデフォルトでついているfont-weight: bold;の影響でFredericka the Greatがつぶれる*/
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-weight: normal;}
     /* ページ内リンクのジャンプをアニメーションで行う */
     html { scroll-behavior: smooth; }
     /* サイト全体で使う色・サイズの変数 */
@@ -224,6 +224,7 @@
         padding-bottom: 16px;
       }
     }
+
     /* ── 部署カード ── */
     .dept-grid {
       display: grid;
