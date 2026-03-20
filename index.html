@@ -11,6 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
   <!-- CSS -->
   <style>
+    html {
+      scrollbar-gutter: stable; /* スクロールバーの有無に関わらず常にスペースを確保 */
+      overflow-x: hidden; /* 横スクロールを禁止 */
+      overflow-y: scroll; /* 常にスクロールバーを表示してグラグラを防ぐ */
+    }
+    /* 全てのタグにデフォルトでついているスタイルをリセット これがないと<h1>にデフォルトでついているfont-weight: bold;の影響でFredericka the Greatがつぶれる*/
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-weight: normal;}
+    /* ページ内リンクのジャンプをアニメーションで行う */
+    html { scroll-behavior: smooth; }
     /* サイト全体で使う色・サイズの変数 */
     /* ★変更ポイント: 色を変えたい場合はここの値を変える */
     :root {
@@ -18,12 +27,7 @@
       --dark: #4a4a4a;      /* 本文テキスト・フッター背景色 */
       --white: #fff;        /* 基本の白 */
       --site-width: 980px;  /* サイト全体の最大横幅 */
-      overflow-x: hidden; /* 横スクロールを禁止 */
     }
-    /* 全てのタグにデフォルトでついているスタイルをリセット これがないと<h1>にデフォルトでついているfont-weight: bold;の影響でFredericka the Greatがつぶれる*/
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-weight: normal;}
-    /* ページ内リンクのジャンプをアニメーションで行う */
-    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Noto Serif JP', 'メイリオ', meiryo, sans-serif;
