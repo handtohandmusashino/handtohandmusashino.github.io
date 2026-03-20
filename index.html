@@ -11,6 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
   <!-- CSS -->
   <style>
+    html {
+      scrollbar-gutter: stable; /* スクロールバーの有無に関わらず常にスペースを確保 */
+    }
     /* 全てのタグにデフォルトでついているスタイルをリセット これがないと<h1>にデフォルトでついているfont-weight: bold;の影響でFredericka the Greatがつぶれる*/
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-weight: normal;}
     /* ページ内リンクのジャンプをアニメーションで行う */
