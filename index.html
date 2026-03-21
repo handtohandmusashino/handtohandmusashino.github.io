@@ -13,6 +13,10 @@
   <style>
     /* 全てのタグにデフォルトでついているスタイルをリセット これがないと<h1>にデフォルトでついているfont-weight: bold;の影響でFredericka the Greatがつぶれる*/
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-weight: normal;}
+
+    img {
+      max-width: 100%;
+    }
     /* ページ内リンクのジャンプをアニメーションで行う */
     html { scroll-behavior: smooth; }
     /* サイト全体で使う色・サイズの変数 */
@@ -25,10 +29,6 @@
     }
 
     body {
-      --scrollbar-width: 0px;
-      overflow-x: auto;
-      overflow-y: scroll;
-
       font-family: 'Noto Serif JP', 'メイリオ', meiryo, sans-serif;
       /* ↑ Noto Serif JPが読み込めない環境ではメイリオ、それもなければsans-serifで表示　保留 */
       background: var(--white);
@@ -89,6 +89,7 @@
       max-width: var(--site-width);
       margin: 0 auto; /* 左右中央に配置 */
       padding: 0 0 40px;
+      overflow: hidden; /* ← 追加 */
     }
 
     /* ヒーロー画像（ページ上部の大きな横断画像） */
@@ -337,7 +338,7 @@
                 教科書販売✖ワクチン支援という独自の支援の形をとっています。
             </p>
             <img src="textbook.jpg" alt="教科書販売の様子"
-                style="width:300px; height:230px; object-fit:cover; border-radius:4px; flex-shrink:0;">
+                style="width:300px; height:230px; object-fit:cover; border-radius:4px; object-fit:cover; border-radius:4px; max-width:100%;">
         </div>
         <h3>・8月　大学祭出店(摩耶祭)</h3>
         <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap; margin-bottom:.6em; flex-direction:row-reverse;">
@@ -345,7 +346,7 @@
                 カステラやモクテル、牛タンの販売など
             </p>
             <img src="festival.jpg" alt="大学祭での出店の様子"
-                style="width:300px; height:230px; object-fit:cover; border-radius:4px; flex-shrink:0;">
+                style="width:300px; height:230px; object-fit:cover; border-radius:4px; object-fit:cover; border-radius:4px; max-width:100%;">
         </div>
         <h3>・12月　クリスマス会</h3>
         <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap; margin-bottom:.6em; flex-direction:row-reverse;">
@@ -353,7 +354,7 @@
                 
             </p>
             <img src="christmas.jpg" alt="クリスマス会の様子"
-                style="width:300px; height:230px; object-fit:cover; border-radius:4px; flex-shrink:0;">
+                style="width:300px; height:230px; object-fit:cover; border-radius:4px; object-fit:cover; border-radius:4px; max-width:100%;">
         </div>
         <h3>・不定期</h3>
         <p> ボランティア(ゴミ拾いやマラソンのスタッフなど)<br>
